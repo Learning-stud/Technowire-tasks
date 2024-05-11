@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flight Booking Interface</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      /* Add custom styles here */
+      body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://th.bing.com/th/id/OIP.sGFekun797ZO9mjiZ5eFJgHaE5?w=248&h=180&c=7&r=0&o=5&pid=1.7');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #3f51b5;
+      }
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      input[type="text"],
+      input[type="date"],
+      select {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+        background-color: #fff;
+        transition: border-color 0.2s ease-in-out;
+      }
+      input[type="text"]:focus,
+      input[type="date"]:focus,
+      select:focus {
+        border-color: #3f51b5;
+        outline: none;
+      }
+      button {
+        width: 100%;
+        padding: 0.5rem;
+        background-color: #3f51b5;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        line-height: 1.5;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+      button:hover {
+        background-color: #5c6bc0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold text-center mb-8">Flight Booking Interface</h1>
+      <form class="max-w-md mx-auto">
+        <div class="mb-4">
+          <label for="trip-type" class="block text-gray-700 font-bold mb-2">Trip Type:</label>
+          <select id="trip-type" class="w-full border border-gray-400 p-2 rounded">
+            <option value="oneway">One Way</option>
+            <option value="roundtrip">Round Trip</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="origin" class="block text-gray-700 font-bold mb-2">Origin:</label>
+          <input type="text" id="origin" value="Agartala" readonly class="w-full border border-gray-400 p-2 rounded" />
+        </div>
+        <div class="mb-4">
+          <label for="destination" class="block text-gray-700 font-bold mb-2">Destination:</label>
+          <input type="text" id="destination" class="w-full border border-gray-400 p-2 rounded" />
+        </div>
+        <div class="mb-4">
+          <label for="travel-date" class="block text-gray-700 font-bold mb-2">Travel Date:</label>
+          <input type="date" id="travel-date" class="w-full border border-gray-400 p-2 rounded" />
+        </div>
+        <div class="mb-4">
+          <label for="pax-size" class="block text-gray-700 font-bold mb-2">PAX Size:</label>
+          <select id="pax-size" class="w-full border border-gray-400 p-2 rounded">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <!-- Add more options as needed -->
+          </select>
+        </div>
+        <div class="mb-4">
+          <button type="submit" class="w-full bg-blue-500 text-white font-bold p-2 rounded hover:bg-blue-700">Search</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
